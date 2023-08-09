@@ -8,6 +8,9 @@ const nunito = Nunito({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'TypeWeather',
   description: 'See the weather forecast in any city.',
+  icons: {
+    icon: '/icon_logo.svg',
+  },
 };
 
 export default function RootLayout({
