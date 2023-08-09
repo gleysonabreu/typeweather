@@ -1,3 +1,4 @@
+import { Header } from '@/components/header';
 import '../styles/globals.css';
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body
         className={`${nunito.className} bg-typeweather bg-cover w-full h-screen`}
       >
+        <Header />
         {children}
       </body>
     </html>
