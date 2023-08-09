@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        typeweather: 'url(/background.png)',
+      },
       colors: {
         brand: {
           blue: {

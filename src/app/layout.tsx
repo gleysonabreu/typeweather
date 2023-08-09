@@ -16,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>{children}</body>
+      <body
+        className={`${nunito.className} bg-typeweather bg-cover w-full h-screen`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
