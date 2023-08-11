@@ -1,3 +1,4 @@
+import Provider from '@/components/provider';
 import '../styles/globals.css';
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${nunito.className} bg-typeweather bg-cover bg-gray-900`}
       >
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
