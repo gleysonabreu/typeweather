@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 async function getWeatherForecast(url: string) {
   const response = await fetch(`${process.env.API_URL}/weather/${url}`, {
     next: {
-      revalidate: 60 * 60, // 1h
+      revalidate: 3600, // 1h
     },
   });
 
