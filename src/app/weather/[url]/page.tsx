@@ -6,11 +6,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+export const revalidate = 1800; // revalidate at most every half hour
+
 async function getWeatherForecast(url: string) {
   const response = await fetch(`${process.env.API_URL}/weather/${url}`, {
-    next: {
-      revalidate: 3600, // 1h
-    },
+    cache: 'no-cache',
   });
 
   if (!response.ok) {

@@ -14,9 +14,7 @@ export async function GET(_request: Request, context: Context) {
     const response = await fetch(
       `http://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_API}&q=${context.params.url}&days=${TOTAL_FORECAST}&aqi=no&alerts=no&lang=pt`,
       {
-        next: {
-          revalidate: 3600, // 1h
-        },
+        cache: 'no-cache',
       },
     );
 
